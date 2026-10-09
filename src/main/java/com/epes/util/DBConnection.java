@@ -13,7 +13,7 @@ public class DBConnection {
     // ====== CHANGE THESE 3 LINES TO MATCH YOUR MYSQL ======
     private static final String URL = "jdbc:mysql://localhost:3306/epes_db";
     private static final String USER = "root";
-    private static final String PASSWORD = "your_mysql_password";
+    private static final String PASSWORD = "you";
     // =======================================================
 
     // Private constructor: this class is only used through its static method
