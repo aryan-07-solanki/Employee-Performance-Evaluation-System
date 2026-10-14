@@ -1,0 +1,5 @@
+# Copy this file, rename the copy to  db.properties  and put your real MySQL details.
+# db.properties is NOT uploaded to GitHub (it is in .gitignore).
+db.url=jdbc:mysql://localhost:3306/epes_db
+db.user=root
+db.password=your_mysql_password

@@ -1,35 +1,20 @@
 package com.epes;
 
-import com.epes.util.DBConnection;
+import com.epes.ui.LoginFrame;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 
-/**
- * Entry point of the application.
- * For now it only tests the database connection by listing all users.
- * Later this will open the Login screen.
- */
+/** Entry point of the application: opens the Login screen. */
 public class Main {
 
     public static void main(String[] args) {
-        String sql = "SELECT id, name, email, role FROM users";
-
-        // try-with-resources closes the connection automatically
-        try (Connection con = DBConnection.getConnection();
-             PreparedStatement ps = con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
-
-            System.out.println("Connected to database successfully!");
-            while (rs.next()) {
-                System.out.println(rs.getInt("id") + " | " + rs.getString("name")
-                        + " | " + rs.getString("email") + " | " + rs.getString("role"));
-            }
-
-        } catch (SQLException e) {
-            System.out.println("Database connection failed: " + e.getMessage());
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            // the default look is fine if the system look is not available
         }
+        // Swing screens must be created on the Swing thread
+        SwingUtilities.invokeLater(() -> new LoginFrame().setVisible(true));
     }
 }

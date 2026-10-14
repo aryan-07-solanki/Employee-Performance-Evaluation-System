@@ -1,0 +1,13 @@
+package com.epes.ui;
+
+import com.epes.model.Employee;
+
+/** Main screen of an employee: one tab for each employee feature. */
+public class EmployeeDashboard extends BaseDashboard {
+
+    public EmployeeDashboard(Employee employee) {
+        super(employee, new String[]{
+                "Performance Tracking", "Feedback History",
+                "Personal Goals", "Performance Reports"});
+    }
+}
