@@ -9,5 +9,7 @@ public class EmployeeDashboard extends BaseDashboard {
         super(employee, new String[]{
                 "Performance Tracking", "Feedback History",
                 "Personal Goals", "Performance Reports"});
+        setTab(1, new FeedbackHistoryPanel(employee));  // Feedback History
+        setTab(2, new MyGoalsPanel(employee));          // Personal Goals
     }
 }

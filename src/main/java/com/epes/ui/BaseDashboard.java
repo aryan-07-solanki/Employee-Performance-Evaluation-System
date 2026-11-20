@@ -4,6 +4,7 @@ import com.epes.model.User;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -24,7 +25,7 @@ public abstract class BaseDashboard extends JFrame {
     protected BaseDashboard(User user, String[] tabNames) {
         setTitle(user.getDashboardTitle());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(900, 600);
+        setSize(1000, 600);
         setLocationRelativeTo(null);
 
         JLabel welcome = new JLabel("  Welcome, " + user.getName() + "  |  " + user.getDashboardTitle());
@@ -51,7 +52,12 @@ public abstract class BaseDashboard extends JFrame {
         add(tabs, BorderLayout.CENTER);
     }
 
-    /** Temporary panel; each feature will replace it with a real table/chart later. */
+    /** Replaces the "coming soon" panel of a tab with the real screen. */
+    protected void setTab(int index, JComponent content) {
+        tabs.setComponentAt(index, content);
+    }
+
+    /** Temporary panel; each feature replaces it with a real table/chart. */
     private JPanel placeholder(String name) {
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(new JLabel(name + " - coming soon", SwingConstants.CENTER), BorderLayout.CENTER);

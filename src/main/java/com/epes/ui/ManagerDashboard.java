@@ -9,5 +9,7 @@ public class ManagerDashboard extends BaseDashboard {
         super(manager, new String[]{
                 "Performance Evaluation", "Goal Setting", "Feedback",
                 "Performance Reports", "Team Management"});
+        setTab(1, new ManagerGoalPanel(manager));       // Goal Setting
+        setTab(2, new ManagerFeedbackPanel(manager));   // Feedback
     }
 }
