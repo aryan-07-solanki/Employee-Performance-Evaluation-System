@@ -12,5 +12,7 @@ public class ManagerDashboard extends BaseDashboard {
         setTab(0, new ManagerEvaluationPanel(manager));  // Performance Evaluation
         setTab(1, new ManagerGoalPanel(manager));        // Goal Setting
         setTab(2, new ManagerFeedbackPanel(manager));    // Feedback
+        setTab(3, new ManagerReportsPanel());            // Performance Reports
+        setTab(4, new ManagerTeamPanel(manager));        // Team Management
     }
 }

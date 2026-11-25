@@ -12,5 +12,6 @@ public class EmployeeDashboard extends BaseDashboard {
         setTab(0, new PerformanceTrackingPanel(employee));  // Performance Tracking
         setTab(1, new FeedbackHistoryPanel(employee));      // Feedback History
         setTab(2, new MyGoalsPanel(employee));              // Personal Goals
+        setTab(3, new EmployeeReportsPanel(employee));      // Performance Reports
     }
 }
