@@ -8,9 +8,9 @@ A Java desktop application where **managers** evaluate employees, set goals, giv
 
 | Name | Role / Modules |
 |------|----------------|
-| YOUR NAME | Developer (all modules) |
-| TEAMMATE 1 NAME | (add role) |
-| TEAMMATE 2 NAME | (add role) |
+| Aryan Solanki | Developer |
+| Aakash | Testing |
+| Sanchita | Documentation |
 
 ## Features
 
