@@ -2,7 +2,7 @@
 
 A Java desktop application where **managers** evaluate employees, set goals, give feedback and view reports, and **employees** track their own performance. Built with **Java Swing**, **JDBC** and **MySQL**.
 
-> GUVI Java project - Review 1
+> GUVI Java project - Review 2
 
 ## Team
 
